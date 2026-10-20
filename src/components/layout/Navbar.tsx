@@ -13,7 +13,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   currentPage,
   onNavigate,
   onOpenPilotModal,
-  onOpenAdminPortal
+  onOpenAdminPortal: _onOpenAdminPortal
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -44,12 +44,13 @@ export const Navbar: React.FC<NavbarProps> = ({
       }`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Wordmark */}
+          {/* Wordmark & Logo */}
           <button
             onClick={() => handleNavClick('home')}
-            className="text-left font-extrabold text-xl tracking-tight text-[#171717] hover:text-[#2457C5] transition-colors focus-visible:ring-2 focus-visible:ring-[#2457C5] rounded p-1"
+            className="flex items-center gap-2.5 text-left font-extrabold text-xl tracking-tight text-[#171717] hover:text-[#2457C5] transition-colors focus-visible:ring-2 focus-visible:ring-[#2457C5] rounded p-1"
           >
-            {BRAND_NAME}
+            <img src="./logo.png" alt={BRAND_NAME} className="w-8 h-8 object-contain rounded-md" />
+            <span>{BRAND_NAME}</span>
           </button>
 
           {/* Desktop Nav */}

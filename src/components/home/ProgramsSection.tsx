@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code2, Brain, Database, Layout, Cpu, Calculator, ArrowRight } from 'lucide-react';
+import { Code2, Brain, Database, Layout, Cpu, Calculator } from 'lucide-react';
 import { TRAINING_PROGRAMS } from '../../data/programs';
 
 interface ProgramsSectionProps {

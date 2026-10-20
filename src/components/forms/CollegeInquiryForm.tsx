@@ -101,16 +101,6 @@ export const CollegeInquiryForm: React.FC<CollegeInquiryFormProps> = ({
     }
   }
 
-  const handleModuleToggle = (moduleId: string) => {
-    setFormData(prev => {
-      const current = prev.selectedModules || [];
-      const exists = current.includes(moduleId);
-      const updated = exists
-        ? current.filter(m => m !== moduleId)
-        : [...current, moduleId];
-      return { ...prev, selectedModules: updated };
-    });
-  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;

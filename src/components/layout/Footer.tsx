@@ -24,9 +24,12 @@ export const Footer: React.FC<FooterProps> = ({
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/10">
           {/* Brand */}
           <div className="md:col-span-2 space-y-4">
-            <span className="font-extrabold text-xl text-white tracking-tight">
-              {BRAND_NAME}
-            </span>
+            <div className="flex items-center gap-2.5">
+              <img src="./logo.png" alt={BRAND_NAME} className="w-8 h-8 object-contain rounded-md bg-white p-0.5" />
+              <span className="font-extrabold text-xl text-white tracking-tight">
+                {BRAND_NAME}
+              </span>
+            </div>
             <p className="text-sm text-white/40 leading-relaxed max-w-sm">
               Practical technical training for engineering colleges across India.
             </p>
